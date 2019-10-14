@@ -1,26 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './hello-world'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const names = ["loco", "hobbit","marco","john"]
+  return (names.map( (name,i) =>
+  <div>
+    <HelloWorld title="first" id={i} message={name}/>
+  </div>
+
+));
 }
 
 export default App;
